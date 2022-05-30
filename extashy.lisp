@@ -111,7 +111,9 @@
        (remove-key tbl i))
 
      (dotimes (i reps)
-       (assert (null (find-key tbl i))))))
+       (assert (null (find-key tbl i))))
+
+     (assert (zerop (key-count tbl)))))
 
   (time
    (let ((tbl (make-hash-table)))
@@ -127,6 +129,8 @@
        (remhash i tbl))
 
      (dotimes (i reps)
-       (assert (null (gethash i tbl)))))))
+       (assert (null (gethash i tbl))))
+
+     (assert (zerop (hash-table-count tbl))))))
 
 
