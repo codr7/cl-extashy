@@ -1,7 +1,7 @@
 (defpackage extashy
   (:use cl)
   (:export *default-slot-count*
-	   ^= ^length
+	   ^= ^length list=
 	   bench find-key hash key-count new-table remove-key slot-count slot-index))
 
 (in-package extashy)
@@ -13,10 +13,13 @@
 (defmethod ^= (x y)
   (eq x y))
 
-(defmethod ^= ((x list) (y list))
+(defun list= (x y)
   (if (and x y)
-      (and (^= (first x) (first y)) (^= (rest x) (rest y)))
+      (and (^= (first x) (first y)) (list= (rest x) (rest y)))
       (not (or x y))))
+
+(defmethod ^= ((x list) (y list))
+  (list= x y))
 
 (defmethod ^= ((x number) (y number))
   (= x y))
