@@ -27,6 +27,9 @@ cl-extashy aims to provide an exstensible and flexible hash table implementation
 ### equality
 cl-estashy provides an extensible, universal equality predicate named `^=`, which is the default for new tables but may be overridden by passing an `:eq`-argument to the constructor.
 
+### hashing
+cl-extashy provides a generic `hash`-function that may be implemented to override the behavior.
+
 ### speed
 cl-extashy is currently around twice as slow as built in hash tables in SBCL, but I suspect it's possible to squeeze that further by profiling and declaring types.
 
