@@ -51,3 +51,6 @@ Evaluation took:
   676,659,146 processor cycles
   114,202,720 bytes consed
 ```
+
+### todo
+Add support for manual resizing.
