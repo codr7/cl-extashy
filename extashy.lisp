@@ -2,13 +2,13 @@
   (:use cl)
   (:export *default-slot-count*
 	   ^= ^length list=
-	   bench find-key hash key-count new-table remove-key slot-count slot-index))
+	   bench find-key hash key-count new-table remove-key slot-count))
 
 (in-package extashy)
 
 (declaim (optimize (safety 0) (debug 0) (speed 3)))
 
-(define-symbol-macro *default-slot-count* 32)
+(defparameter *default-slot-count* 32)
 
 (defmethod ^= (x y)
   (eq x y))
