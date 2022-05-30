@@ -58,4 +58,5 @@ Evaluation took:
 ```
 
 ### todo
-Add support for manual resizing.
+- Add `do-table`-macro.
+- Add support for manual resizing via `(setf slot-count)`.

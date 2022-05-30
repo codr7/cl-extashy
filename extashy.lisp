@@ -44,9 +44,6 @@
 (defun slot-count (tbl)
   (length (table-slots tbl)))
 
-;;TODO
-;;Add resize/setf slot-count
-
 (defun key-count (tbl)
   (table-key-count tbl))
 
