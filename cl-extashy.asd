@@ -1,4 +1,4 @@
-(asdf:defsystem unidys
+(asdf:defsystem extashy
   :name "extashy"
   :version "1"
   :maintainer "codr7"
